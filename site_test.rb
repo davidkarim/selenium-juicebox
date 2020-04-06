@@ -7,6 +7,16 @@ require 'rspec'
 
 describe 'OWASP Juice Box Website' do
 
+  # it 'can register a user' do
+  #   site = Site.new
+  #   site.dismiss_welcome
+
+  #   login_title = site.register_user
+  #   # sleep 2
+  #   # expect(login_title).to eq('OWASP Juice Shop')
+  #   site.finish
+  # end
+
   it 'can login to the dashboard' do
     site = Site.new
     site.dismiss_welcome

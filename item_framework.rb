@@ -7,10 +7,12 @@ require 'pry'
 class Item < Site
   def select_item(item)
     item += 1
-    path = "mat-table.mat-table > mat-row:nth-child(#{item}) > " \
+    sleep 2
+    path = "mat-table > mat-row:nth-child(#{item}) > " \
     'mat-cell.mat-cell.cdk-column-Image.mat-column-Image.ng-star-inserted > img'
     element = @driver.find_element css: path
     element.click
+    sleep 2
     path = '#mat-dialog-0 > app-product-details > mat-dialog-content > div > h1'
     element = @driver.find_element css: path
     element.text
